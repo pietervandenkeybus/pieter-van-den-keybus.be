@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pieter Van den Keybus — CX &amp; UX Strateeg | Antwerpen</title>
-  <meta name="description" content="Pieter Van den Keybus is een CX- en UX-strateeg uit Antwerpen. Oprichter van Uflow en lid van de strategische adviesraad van Kom op tegen Kanker." />
+  <title>Pieter Van den Keybus — UX- &amp; CX-strateeg uit Antwerpen</title>
+  <meta name="description" content="Pieter Van den Keybus is UX- en CX-strateeg uit Antwerpen. Hij helpt organisaties via Uflow betere digitale ervaringen ontwerpen, vertrekkend vanuit gebruikersonderzoek. Lid van de adviesraad van Kom op tegen Kanker." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="author" content="Pieter Van den Keybus" />
-  <meta name="keywords" content="Pieter Van den Keybus, UX strateeg, CX strateeg, UX consultant, Antwerpen, Uflow, service design, gebruikersonderzoek" />
+  <meta name="keywords" content="Pieter Van den Keybus, UX-strateeg, CX-strateeg, UX-consultant Antwerpen, klantgerichte strategie, service design, gebruikersonderzoek, digitaal productontwerp, Uflow" />
   <link rel="canonical" href="https://pieter-van-den-keybus.be/" />
 
   <!-- Favicon (inline SVG) -->
@@ -16,8 +16,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://pieter-van-den-keybus.be/" />
-  <meta property="og:title" content="Pieter Van den Keybus — CX &amp; UX Strateeg" />
-  <meta property="og:description" content="UX/CX-strateeg en consultant gevestigd in Antwerpen. Oprichter van Uflow en lid van de adviesraad van Kom op tegen Kanker." />
+  <meta property="og:title" content="Pieter Van den Keybus — UX- &amp; CX-strateeg" />
+  <meta property="og:description" content="UX- en CX-strateeg uit Antwerpen. Helpt organisaties betere digitale ervaringen bouwen vanuit gebruikersinzicht. Oprichter van Uflow." />
   <meta property="og:locale" content="nl_BE" />
   <meta property="og:site_name" content="Pieter Van den Keybus" />
   <meta property="profile:first_name" content="Pieter" />
@@ -25,8 +25,8 @@
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pieter Van den Keybus — CX &amp; UX Strateeg" />
-  <meta name="twitter:description" content="UX/CX-strateeg en consultant gevestigd in Antwerpen. Oprichter van Uflow." />
+  <meta name="twitter:title" content="Pieter Van den Keybus — UX- &amp; CX-strateeg" />
+  <meta name="twitter:description" content="UX- en CX-strateeg uit Antwerpen die digitale ervaringen ontwerpt vanuit de gebruiker. Oprichter van Uflow." />
 
   <!-- Identity links (rel=me) -->
   <link rel="me" href="https://www.linkedin.com/in/pietervandenkeybus" />
@@ -41,15 +41,17 @@
     "name": "Pieter Van den Keybus",
     "givenName": "Pieter",
     "familyName": "Van den Keybus",
-    "jobTitle": "CX & UX Strateeg",
-    "description": "CX- en UX-strateeg gevestigd in Antwerpen. Oprichter van Uflow en lid van de strategische adviesraad van Kom op tegen Kanker.",
+    "jobTitle": "UX- & CX-strateeg",
+    "description": "UX- en CX-strateeg uit Antwerpen. Helpt organisaties betere digitale ervaringen ontwerpen vanuit gebruikersonderzoek. Oprichter van Uflow en lid van de strategische adviesraad van Kom op tegen Kanker.",
     "url": "https://pieter-van-den-keybus.be",
     "email": "pieter@uflow.be",
     "knowsLanguage": ["nl", "en", "fr"],
     "sameAs": [
       "https://www.linkedin.com/in/pietervandenkeybus",
       "https://uflow.be",
-      "https://pietervandenkeybus.be"
+      "https://pieter-vandenkeybus.be",
+      "https://pieter-vandenkeybus.eu",
+      "https://pieter-vandenkeybus.net"
     ],
     "worksFor": {
       "@type": "Organization",
@@ -77,7 +79,7 @@
     "@id": "https://pieter-van-den-keybus.be/#website",
     "url": "https://pieter-van-den-keybus.be",
     "name": "Pieter Van den Keybus",
-    "description": "Persoonlijke website van Pieter Van den Keybus, CX & UX Strateeg uit Antwerpen.",
+    "description": "Persoonlijke website van Pieter Van den Keybus, UX- en CX-strateeg uit Antwerpen.",
     "inLanguage": "nl-BE",
     "author": { "@id": "https://pieter-van-den-keybus.be/#person" }
   }
@@ -431,11 +433,17 @@
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
     }
-    .reveal {
+    /* Content is visible by default. Only when JS runs (body.js) do we hide
+       reveal elements first, so crawlers, PDF export and no-JS visitors always
+       see the content. */
+    .js .reveal {
       opacity: 0; transform: translateY(24px);
       transition: opacity .6s ease, transform .6s ease;
     }
-    .reveal.visible { opacity: 1; transform: none; }
+    .js .reveal.visible { opacity: 1; transform: none; }
+    @media print {
+      .reveal, .js .reveal { opacity: 1 !important; transform: none !important; }
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
@@ -473,34 +481,34 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">CX &amp; UX Strateeg · Antwerpen</div>
+    <div class="hero-eyebrow">UX- &amp; CX-strateeg · Antwerpen</div>
     <h1 class="hero-title">
       Pieter<br>
       Van den<br>
       <em>Keybus</em>
     </h1>
-    <p class="hero-sub">Ik help organisaties betere digitale ervaringen bouwen — vanuit de gebruiker, gedreven door strategie.</p>
+    <p class="hero-sub">Ik help organisaties digitale producten en diensten ontwerpen die kloppen voor wie ze gebruikt — onderbouwd met onderzoek, gericht op resultaat.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Neem contact op →</a>
-      <a href="#projects" class="btn-ghost">Bekijk mijn werk</a>
+      <a href="#projects" class="btn-ghost">Recent werk</a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="hero-card">
-      <p class="hero-card-label">Profiel op een rij</p>
+      <p class="hero-card-label">In het kort</p>
       <div class="stat-row">
         <div class="stat">
           <span class="stat-num">10+</span>
-          <span class="stat-label">jaar UX/CX-ervaring</span>
+          <span class="stat-label">jaar in UX &amp; CX</span>
         </div>
         <div class="stat">
           <span class="stat-num">2</span>
-          <span class="stat-label">actieve rollen</span>
+          <span class="stat-label">vaste engagementen</span>
         </div>
       </div>
       <div class="hero-divider"></div>
       <div class="hero-roles">
-        <div class="hero-role"><div class="hero-role-dot"></div>Oprichter — Uflow, Antwerpen</div>
+        <div class="hero-role"><div class="hero-role-dot"></div>Oprichter &amp; consultant — Uflow, Antwerpen</div>
         <div class="hero-role"><div class="hero-role-dot"></div>Advisory Board — Kom op tegen Kanker</div>
       </div>
     </div>
@@ -513,25 +521,25 @@
     <div class="about-grid">
       <div class="about-left reveal">
         <p class="section-label">Over mij</p>
-        <h2 class="section-title">Strategie die begint bij de mens</h2>
-        <p class="about-body">Ik ben Pieter Van den Keybus, CX- en UX-strateeg gevestigd in Antwerpen. Via mijn bureau <strong>Uflow</strong> begeleid ik organisaties bij het ontwerpen van gebruiksvriendelijke digitale producten en klantgerichte diensten.</p>
-        <p class="about-body">Met meer dan tien jaar ervaring in UX-onderzoek, service design en digitale strategie werk ik voor een divers klantenportfolio — van Belgische bedrijven tot internationale organisaties.</p>
-        <p class="about-body">Mijn aanpak combineert kwalitatief gebruikersonderzoek met strategisch inzicht — altijd gericht op concrete, uitvoerbare aanbevelingen die het verschil maken voor gebruikers én organisaties.</p>
+        <h2 class="section-title">Strategie die vertrekt vanuit de gebruiker</h2>
+        <p class="about-body">Ik ben Pieter Van den Keybus, UX- en CX-strateeg uit Antwerpen. Via mijn bureau <strong>Uflow</strong> help ik organisaties digitale producten en diensten bouwen die mensen moeiteloos kunnen gebruiken — en die tegelijk de doelen van de organisatie dienen.</p>
+        <p class="about-body">In ruim tien jaar bouwde ik ervaring op in gebruikersonderzoek, service design en digitale strategie, voor uiteenlopende opdrachtgevers — van Belgische ondernemingen tot Europese instellingen.</p>
+        <p class="about-body">Mijn werkwijze koppelt kwalitatief onderzoek aan een nuchtere kijk op haalbaarheid. Het resultaat zijn geen rapporten voor in de lade, maar concrete aanbevelingen waar een team meteen mee verder kan.</p>
       </div>
       <div class="about-right reveal">
         <div class="about-highlights">
           <div class="highlight">
             <div class="highlight-icon">U</div>
             <div class="highlight-text">
-              <strong>Uflow — UX/CX Bureau</strong>
-              <span>Oprichter en managing consultant. Strategische UX/CX-begeleiding voor Belgische en internationale organisaties.</span>
+              <strong>Uflow — UX/CX-bureau</strong>
+              <span>Oprichter en consultant. Strategische UX- en CX-begeleiding voor organisaties in binnen- en buitenland.</span>
             </div>
           </div>
           <div class="highlight">
             <div class="highlight-icon">K</div>
             <div class="highlight-text">
               <strong>Kom op tegen Kanker</strong>
-              <span>Lid van de strategische adviesraad. Bijdrage aan digitale strategie en communicatie.</span>
+              <span>Lid van de strategische adviesraad, met focus op digitale ervaring en communicatie.</span>
             </div>
           </div>
         </div>
@@ -544,13 +552,13 @@
 <section id="expertise">
   <div class="section-inner">
     <p class="section-label reveal">Expertise</p>
-    <h2 class="section-title reveal">Wat ik doe</h2>
-    <p class="section-intro reveal">Mijn werk situeert zich op het snijvlak van gebruikersonderzoek, strategie en digitaal productontwerp.</p>
+    <h2 class="section-title reveal">Waar ik mee help</h2>
+    <p class="section-intro reveal">Vier werkterreinen op het snijvlak van onderzoek, strategie en ontwerp — die in de praktijk voortdurend in elkaar overlopen.</p>
     <div class="expertise-grid">
       <div class="expertise-card reveal">
         <div class="expertise-num">01</div>
         <h3>UX Research &amp; Strategy</h3>
-        <p>Van exploratief gebruikersonderzoek tot strategische UX-roadmaps. Ik breng de behoeften van gebruikers in kaart en vertaal die naar concrete aanbevelingen voor product en dienst.</p>
+        <p>Van exploratief onderzoek tot een onderbouwde UX-roadmap. Ik breng in kaart wat gebruikers echt nodig hebben en vertaal dat naar heldere keuzes voor product en dienst.</p>
         <div class="expertise-tags">
           <span class="tag">Diepte-interviews</span>
           <span class="tag">Gebruikerstesten</span>
@@ -562,7 +570,7 @@
       <div class="expertise-card reveal">
         <div class="expertise-num">02</div>
         <h3>CX Strategie &amp; Consultancy</h3>
-        <p>Ik help organisaties een coherente klantervaring te ontwerpen — van eerste contact tot after-sales. Strategisch verankerd, operationeel uitvoerbaar.</p>
+        <p>Ik help organisaties een samenhangende klantervaring vormgeven, van eerste contact tot nazorg — strategisch onderbouwd en operationeel haalbaar.</p>
         <div class="expertise-tags">
           <span class="tag">CX-visie</span>
           <span class="tag">Journey optimalisatie</span>
@@ -573,7 +581,7 @@
       <div class="expertise-card reveal">
         <div class="expertise-num">03</div>
         <h3>Digitaal Product Design</h3>
-        <p>Van concept tot prototype: ik begeleid digitale productteams bij het ontwerpen van intuïtieve interfaces en solide informatiestructuren.</p>
+        <p>Van ruw concept tot testbaar prototype: ik begeleid productteams naar intuïtieve interfaces en doordachte informatiestructuren.</p>
         <div class="expertise-tags">
           <span class="tag">Wireframing</span>
           <span class="tag">Prototyping</span>
@@ -584,7 +592,7 @@
       <div class="expertise-card reveal">
         <div class="expertise-num">04</div>
         <h3>Advisory &amp; Governance</h3>
-        <p>Strategische begeleiding voor besturen en management op het vlak van digitale transformatie, klantgerichtheid en UX-governance.</p>
+        <p>Sparringpartner voor besturen en management rond digitale transformatie, klantgerichtheid en het verankeren van UX in de organisatie.</p>
         <div class="expertise-tags">
           <span class="tag">Adviesraad</span>
           <span class="tag">Governance</span>
@@ -599,14 +607,14 @@
 <section id="projects">
   <div class="section-inner">
     <p class="section-label reveal">Projecten</p>
-    <h2 class="section-title reveal">Recente samenwerkingen</h2>
-    <p class="section-intro reveal">Een selectie van trajecten en klanten.</p>
+    <h2 class="section-title reveal">Een greep uit de samenwerkingen</h2>
+    <p class="section-intro reveal">Trajecten waarin onderzoek en strategie samenkomen.</p>
     <div class="projects-list">
 
       <div class="project-row reveal">
         <div>
           <div class="project-name">Uflow.be</div>
-          <div class="project-desc">UX/CX strategiebureau — volledig klantenportfolio</div>
+          <div class="project-desc">Eigen UX/CX-bureau — volledig opdrachtenportfolio</div>
         </div>
         <div class="project-meta">
           <strong>Rol</strong>Oprichter
@@ -641,8 +649,8 @@
     <p class="section-label">Contact</p>
     <div class="contact-grid">
       <div>
-        <h2 class="section-title" style="color:var(--white);">Laten we kennismaken</h2>
-        <p class="contact-lead">Wil je samenwerken of gewoon kennismaken? Ik ben bereikbaar via e-mail of LinkedIn.</p>
+        <h2 class="section-title" style="color:var(--white);">Even kennismaken?</h2>
+        <p class="contact-lead">Loopt er een vraagstuk rond gebruikers, klanten of digitale diensten? Een kort gesprek leert vaak het meest. Ik ben bereikbaar via e-mail of LinkedIn.</p>
         <div>
           <a href="mailto:pieter@uflow.be" class="contact-link">
             <span class="contact-link-type">E-mail</span>
@@ -662,7 +670,7 @@
       <div class="contact-aside">
         <div class="contact-info-block">
           <h4>Locatie</h4>
-          <p>Antwerpen, België<br>Beschikbaar voor projecten in België en Europa.</p>
+          <p>Antwerpen, België<br>Beschikbaar voor opdrachten in België en de rest van Europa, op locatie of remote.</p>
         </div>
         <div class="contact-info-block">
           <h4>Talen</h4>
@@ -670,7 +678,7 @@
         </div>
         <div class="contact-info-block">
           <h4>Beschikbaarheid</h4>
-          <p>Neem contact op voor informatie over beschikbaarheid en tarieven.</p>
+          <p>Neem contact op voor de actuele planning en tarieven.</p>
         </div>
       </div>
     </div>
@@ -690,6 +698,10 @@
 <script>
   // Dynamic copyright year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mark that JS is active — enables the reveal animation. Without this class
+  // the content stays fully visible (crawlers, PDF, no-JS).
+  document.body.classList.add('js');
 
   // Sticky nav border
   const nav = document.getElementById('navbar');
